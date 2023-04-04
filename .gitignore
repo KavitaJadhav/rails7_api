@@ -32,3 +32,5 @@ tmp/
 test/
 vendor/
 .idea/*
+.byebug_history
+.DS_Store
