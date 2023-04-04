@@ -15,4 +15,10 @@ class User < ApplicationRecord
     users = User.some_complex_scope
     emails = Email.some_complex_scope
   end
+
+  def try_sole
+    User.find_sole_by(last_name: 'Jadhav')
+
+    User.where(last_name: 'Jadhav').sole
+  end
 end
