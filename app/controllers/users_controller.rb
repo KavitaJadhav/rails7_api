@@ -1,11 +1,8 @@
-require 'byebug'
-
 class UsersController < ApplicationController
   # include ActiveStorage::SetBlob, ActiveStorage::Streaming
 
   def profile_pic
     @user = User.find(params[:id])
-
     image = @user.profile_pic
     response.headers["Content-Type"] = image.content_type
     response.headers["Content-Disposition"] = "inline"
