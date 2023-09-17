@@ -1,4 +1,6 @@
-1. bin/rails credentials:edit  - This command will create the credentials file if it does not exist. Additionally, this command will create config/master.key if no master key is defined.Secrets kept in the credentials file are accessible via Rails.application.credentials. For example, with the following decrypted config/credentials.yml.enc
+1. bin/rails credentials:edit  - This command will create the credentials file if it does not exist.
+ Additionally, this command will create config/master.key if no master key is defined.
+ Secrets kept in the credentials file are accessible via Rails.application.credentials. For example, with the following decrypted config/credentials.yml.enc
 
 2. bin/rails db:encryption:init -
 Add this entry to the credentials of the target environment:
@@ -16,7 +18,7 @@ ignore_case: true - This will persist original value. the content with the origi
 
 config.active_record.encryption.support_unencrypted_data - to Support migrated unencrypted data
 
-keys rotation - i will start decryption with latest key and wil keep decrypting until value retrieve
+keys rotation - It will start decryption with latest key and will keep decrypting until value retrieve
 
 
 deterministic: true, previous: { deterministic: false } - if type changed in between, add previous type to support old values

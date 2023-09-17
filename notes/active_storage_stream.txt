@@ -19,3 +19,7 @@ Rails 7 enabled capability to update variant. like thumb image.
   has_one_attached :profile_pic do |attachable|
     attachable.variant :thumb, resize: "10x10"
   end
+
+
+User.last.profile_image.variant(:thumb)
+Rails.application.routes.url_helpers.url_for(User.last.profile_image)

@@ -10,7 +10,7 @@ However, while classic mode relies on the const_missing callback for loading fil
 
 Disable Zeitwerk mode - config.autoloader = :classic in your application.rb.
 
-zeitwerk is a seperate gem which can be included in non rails applications
+zeitwerk is a separate gem which can be included in non rails applications
 
 
 classic mode - it raise const_missing method , const_missing method of ruby is overwritten in Rails to call Module.autoload method
